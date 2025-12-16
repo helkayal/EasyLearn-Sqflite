@@ -22,6 +22,13 @@ abstract final class AppTextStyles {
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );
+
+  static const TextStyle white24SemiBold = TextStyle(
+    color: AppColors.whiteColor,
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+  );
+
   static const TextStyle white16SemiBold = TextStyle(
     color: AppColors.whiteColor,
     fontSize: 16,

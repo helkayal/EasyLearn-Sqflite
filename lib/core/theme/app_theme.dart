@@ -11,14 +11,16 @@ abstract final class AppTheme {
       bodySmall: AppTextStyles.black12Regular,
       titleLarge: AppTextStyles.black24SemiBold,
       titleMedium: AppTextStyles.white16SemiBold,
+      headlineLarge: AppTextStyles.white24SemiBold,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.greenColor,
         foregroundColor: AppColors.whiteColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        padding: const EdgeInsets.symmetric(vertical: 16),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
         textStyle: AppTextStyles.white16SemiBold,
+        elevation: 0,
       ),
     ),
   );

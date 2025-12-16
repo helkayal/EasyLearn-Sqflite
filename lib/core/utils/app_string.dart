@@ -10,6 +10,6 @@ class AppString {
 
   static const String splashTitle = "Create Your Tasks Easily";
   static const String splashText =
-      "Taskly to Organize your day and Get things done.";
+      "Taskly to Organize your day and Get things done. \n Turn your ideas into organized tasks and get things done with ease.";
   static const String splashButton = "Let's Go";
 }
