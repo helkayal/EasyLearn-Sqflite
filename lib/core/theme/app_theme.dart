@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:task13_sqflite/core/theme/app_colors.dart';
+import 'package:task13_sqflite/core/theme/app_text_styles.dart';
+
+abstract final class AppTheme {
+  static ThemeData appTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.darkGreenColor,
+    textTheme: TextTheme(
+      bodyLarge: AppTextStyles.black16Medium,
+      bodyMedium: AppTextStyles.black14Regular,
+      bodySmall: AppTextStyles.black12Regular,
+      titleLarge: AppTextStyles.black24SemiBold,
+      titleMedium: AppTextStyles.white16SemiBold,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColors.greenColor,
+        foregroundColor: AppColors.whiteColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        textStyle: AppTextStyles.white16SemiBold,
+      ),
+    ),
+  );
+}
