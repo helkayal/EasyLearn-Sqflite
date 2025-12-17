@@ -1,5 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:task13_sqflite/features/home/model/tasks_model.dart';
 
 class DBHelper {
   static final DBHelper _instance = DBHelper._internal();
@@ -34,23 +35,28 @@ class DBHelper {
 
   // ================= CRUD METHODS =================
 
-  Future<int> insertTask(Map<String, dynamic> task) async {
+  Future<int> insertTask(TaskModel task) async {
     final db = await database;
-    return await db.insert('tasks', task);
+    return await db.insert('tasks', task.toMap());
   }
 
-  Future<List<Map<String, dynamic>>> getTasks() async {
+  Future<List<TaskModel>> getTasks() async {
     final db = await database;
-    return await db.query('tasks', orderBy: 'createdAt DESC');
+    final List<Map<String, dynamic>> maps = await db.query(
+      'tasks',
+      orderBy: 'createdAt DESC',
+    );
+
+    return maps.map((map) => TaskModel.fromMap(map)).toList();
   }
 
-  Future<int> updateTask(Map<String, dynamic> task) async {
+  Future<int> updateTask(TaskModel task) async {
     final db = await database;
     return await db.update(
       'tasks',
-      task,
+      task.toMap(),
       where: 'id = ?',
-      whereArgs: [task['id']],
+      whereArgs: [task.id],
     );
   }
 

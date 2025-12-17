@@ -7,19 +7,19 @@ abstract final class AppTextStyles {
     fontSize: 24,
     fontWeight: FontWeight.w600,
   );
-  static const TextStyle black16Medium = TextStyle(
+  static const TextStyle black18Medium = TextStyle(
+    color: AppColors.blackColor,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static const TextStyle black16Regular = TextStyle(
     color: AppColors.blackColor,
     fontSize: 16,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
   static const TextStyle black14Regular = TextStyle(
     color: AppColors.blackColor,
     fontSize: 14,
-    fontWeight: FontWeight.w400,
-  );
-  static const TextStyle black12Regular = TextStyle(
-    color: AppColors.blackColor,
-    fontSize: 12,
     fontWeight: FontWeight.w400,
   );
 

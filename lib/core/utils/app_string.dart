@@ -7,6 +7,7 @@ class AppString {
   static const String save = "Save";
   static const String title = "Title";
   static const String description = "Description";
+  static const String noDataFound = "No Tasks Found";
 
   static const String splashTitle = "Create Your Tasks Easily";
   static const String splashText =

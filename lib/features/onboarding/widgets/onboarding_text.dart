@@ -22,7 +22,7 @@ class OnboardingText extends StatelessWidget {
         ),
       ),
       child: Column(
-        spacing: 20,
+        spacing: 10,
         children: [
           Text(
             AppString.splashTitle,
@@ -36,7 +36,7 @@ class OnboardingText extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const HomeScreen()),
               );

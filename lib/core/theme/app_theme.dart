@@ -6,12 +6,18 @@ abstract final class AppTheme {
   static ThemeData appTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.darkGreenColor,
     textTheme: TextTheme(
-      bodyLarge: AppTextStyles.black16Medium,
-      bodyMedium: AppTextStyles.black14Regular,
-      bodySmall: AppTextStyles.black12Regular,
+      bodyLarge: AppTextStyles.black18Medium,
+      bodyMedium: AppTextStyles.black16Regular,
+      bodySmall: AppTextStyles.black14Regular,
       titleLarge: AppTextStyles.black24SemiBold,
       titleMedium: AppTextStyles.white16SemiBold,
       headlineLarge: AppTextStyles.white24SemiBold,
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.darkGreenColor,
+      elevation: 0,
+      centerTitle: true,
+      titleTextStyle: AppTextStyles.white24SemiBold,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -22,6 +28,12 @@ abstract final class AppTheme {
         textStyle: AppTextStyles.white16SemiBold,
         elevation: 0,
       ),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColors.greenColor,
+      foregroundColor: AppColors.whiteColor,
+      elevation: 0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
     ),
   );
 }

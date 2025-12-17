@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task13_sqflite/core/theme/app_colors.dart';
+import 'package:task13_sqflite/core/utils/app_decoration.dart';
 import 'package:task13_sqflite/core/utils/app_string.dart';
 import 'package:task13_sqflite/features/onboarding/widgets/onboarding_text.dart';
 
@@ -13,16 +13,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [AppColors.darkGreenColor, AppColors.greenColor],
-                stops: [0.5, 1.0],
-              ),
-            ),
-          ),
+          Container(decoration: appDecoration),
           Column(
             children: [
               SizedBox(height: 80),
