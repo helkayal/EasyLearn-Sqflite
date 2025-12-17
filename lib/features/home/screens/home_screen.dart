@@ -1,26 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:task13_sqflite/features/home/widgets/task_widget.dart';
-
-// class HomeScreen extends StatelessWidget {
-//   const HomeScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: ListView.separated(
-//         shrinkWrap: true,
-//         physics: const BouncingScrollPhysics(),
-//         itemCount: 10,
-//         itemBuilder: (context, index) => const TaskWidget(),
-//         separatorBuilder: (context, index) => const SizedBox(height: 10),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () {},
-//         child: const Icon(Icons.add, size: 30),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:task13_sqflite/core/helpers/db_helper.dart';
 import 'package:task13_sqflite/core/utils/app_string.dart';
