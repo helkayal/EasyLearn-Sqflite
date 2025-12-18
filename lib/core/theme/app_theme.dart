@@ -35,5 +35,17 @@ abstract final class AppTheme {
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: AppColors.greenColor),
+      labelStyle: TextStyle(color: AppColors.greenColor),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderSide: BorderSide(color: AppColors.darkGreenColor),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderSide: BorderSide(color: AppColors.darkGreenColor),
+      ),
+    ),
   );
 }

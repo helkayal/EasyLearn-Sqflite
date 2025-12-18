@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task13_sqflite/core/theme/app_colors.dart';
 import 'package:task13_sqflite/core/utils/app_string.dart';
 import 'package:task13_sqflite/features/home/model/tasks_model.dart';
 
@@ -42,7 +43,13 @@ class _AddEditTaskDialogState extends State<AddEditTaskDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text(widget.task == null ? AppString.addTask : AppString.editTask),
+      backgroundColor: AppColors.greyColor,
+      title: Text(
+        widget.task == null ? AppString.addTask : AppString.editTask,
+        style: Theme.of(
+          context,
+        ).textTheme.titleLarge!.copyWith(color: AppColors.darkGreenColor),
+      ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
